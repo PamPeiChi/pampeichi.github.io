@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pei-Chi Pan · HCI PhD Student, University of Houston</title>
+<meta name="description" content="Pei-Chi Pan is a PhD student in Human–Computer Interaction at the University of Houston, working on human-centered AI for health and social wellbeing.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Ccircle cx='7' cy='13' r='3.4' fill='%23F8CD5F'/%3E%3Ccircle cx='19' cy='13' r='3.4' fill='%23D8CCAA'/%3E%3Ccircle cx='13' cy='7' r='3.4' fill='%23D8CCAA'/%3E%3Ccircle cx='13' cy='19' r='3.4' fill='%23D8CCAA'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent: #F8CD5F;
+    --bg: #F8F6F1;
+    --card: #FFFFFF;
+    --line: #ECE7DC;
+    --line-strong: #CFC7B6;
+    --ink: #1F1F1F;
+    --body: #3E3A34;
+    --muted: #5E5646;
+    --faint: #6B6457;
+    --sans: 'Manrope', system-ui, sans-serif;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --gutter: 96px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+  a { color: var(--ink); text-decoration-color: #C9B98C; text-underline-offset: 4px; }
+  a:hover { color: #6B5316; }
+  a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 2px; }
+  h1, h2, h3 { font-family: var(--sans); font-weight: 700; letter-spacing: -0.02em; margin: 0; }
+  p { margin: 0; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 var(--gutter); }
+  .hl { background: linear-gradient(transparent 60%, var(--accent) 60%); padding: 0 4px; }
+
+  .skip { position: absolute; left: -9999px; top: 0; background: var(--accent); padding: 12px 16px; font-family: var(--sans); font-weight: 700; z-index: 10; }
+  .skip:focus { left: 16px; top: 16px; }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; font-family: var(--sans); font-size: 0.95rem; font-weight: 700; text-decoration: none; color: var(--ink); background: var(--accent); border: 1px solid var(--accent); }
+  .btn:hover { color: var(--ink); filter: brightness(0.96); }
+  .btn.outline { background: var(--card); border-color: var(--line-strong); }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 14px; }
+
+  /* Header */
+  .site-header { background: var(--card); border-bottom: 1px solid var(--line); }
+  .site-header .wrap { display: flex; justify-content: space-between; align-items: center; min-height: 88px; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-family: var(--sans); font-size: 1.25rem; font-weight: 800; text-decoration: none; }
+  .nav { display: flex; align-items: center; gap: 24px; }
+  .nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 0.95rem; font-weight: 500; }
+  .nav ul a { display: block; padding: 10px 12px; text-decoration: none; }
+  .nav ul a:hover { text-decoration: underline; }
+  .nav .btn { min-height: 44px; padding: 0 22px; }
+
+  /* Intro */
+  .intro .wrap { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 24px 64px; align-items: center; padding-top: 104px; padding-bottom: 104px; }
+  .intro-text { display: flex; flex-direction: column; gap: 22px; }
+  .eyebrow { font-family: var(--sans); font-size: 0.95rem; font-weight: 700; color: var(--muted); }
+  .intro h1 { font-size: 3.25rem; line-height: 1.15; }
+  .lede { font-size: 1.25rem; color: var(--body); max-width: 600px; }
+  .checks { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; font-family: var(--sans); font-size: 1rem; font-weight: 500; }
+  .checks li { display: flex; gap: 12px; align-items: center; }
+  .checks svg { flex-shrink: 0; }
+
+  .profile-card { justify-self: end; width: 100%; max-width: 380px; padding: 36px 32px 28px; background: var(--card); border: 1px solid var(--line); box-shadow: 0 18px 40px rgba(60, 50, 20, 0.08); display: flex; flex-direction: column; align-items: center; gap: 24px; }
+  .portrait { width: 100%; max-width: 300px; aspect-ratio: 1; border-radius: 50%; background: var(--accent); overflow: hidden; display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-size: 4rem; font-weight: 800; color: #3A3217; }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .profiles { align-self: stretch; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px; }
+  .profiles a { display: flex; align-items: center; gap: 10px; min-height: 44px; font-family: var(--sans); font-size: 0.875rem; font-weight: 700; text-decoration: none; }
+  .profiles a:hover { text-decoration: underline; }
+  .badge { width: 32px; height: 32px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+  /* Sections */
+  section h2 { font-size: 2.375rem; }
+  .band { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .band .wrap { padding-top: 96px; padding-bottom: 96px; display: flex; flex-direction: column; gap: 32px; }
+  .project { padding: 48px; background: var(--bg); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 16px; }
+  .meta { font-family: var(--sans); font-size: 0.875rem; font-weight: 700; color: var(--muted); }
+  .project h3 { font-size: 1.875rem; }
+  .project p.desc { color: var(--body); max-width: 760px; }
+
+  .pubs .wrap { padding-top: 104px; display: flex; flex-direction: column; gap: 28px; }
+  .pub-list { list-style: none; margin: 0; padding: 0; background: var(--card); border: 1px solid var(--line); }
+  .pub-list li { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 4px 24px; padding: 28px 40px; border-bottom: 1px solid var(--line); }
+  .pub-list li:last-child { border-bottom: 0; }
+  .venue { font-family: var(--sans); font-size: 0.875rem; font-weight: 700; color: var(--muted); padding-top: 4px; }
+  .pub-title { font-family: var(--sans); font-size: 1.19rem; font-weight: 700; text-decoration: none; line-height: 1.45; }
+  .pub-title:hover { text-decoration: underline; }
+  .authors { display: block; font-size: 1rem; color: var(--muted); margin-top: 4px; }
+  .authors strong { color: var(--ink); }
+
+  /* Footer */
+  .site-footer { margin-top: 104px; background: var(--card); border-top: 1px solid var(--line); }
+  .site-footer .wrap { padding-top: 72px; padding-bottom: 48px; display: flex; flex-direction: column; gap: 32px; }
+  .footer-top { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center; }
+  .site-footer h2 { font-size: 2.125rem; }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 8px 28px; font-family: var(--sans); font-size: 0.95rem; font-weight: 500; }
+  .footer-links a { display: inline-block; padding: 6px 0; }
+  .fine { font-family: var(--sans); font-size: 0.8125rem; color: var(--faint); }
+
+  /* Tablet */
+  @media (max-width: 980px) {
+    :root { --gutter: 40px; }
+    .intro .wrap { grid-template-columns: 1fr; padding-top: 64px; padding-bottom: 72px; }
+    .profile-card { justify-self: start; order: -1; flex-direction: row; max-width: none; align-items: center; padding: 24px; gap: 24px; }
+    .portrait { width: 140px; max-width: 140px; flex-shrink: 0; font-size: 2.5rem; }
+    .profiles { align-self: center; }
+  }
+  /* Phone */
+  @media (max-width: 640px) {
+    :root { --gutter: 16px; }
+    body { font-size: 1.0625rem; }
+    .site-header .wrap { min-height: 72px; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; }
+    .nav { width: 100%; justify-content: space-between; gap: 4px; }
+    .nav ul { gap: 0; font-size: 0.85rem; margin-left: -6px; }
+    .nav ul a { padding: 12px 6px; }
+    .nav .btn { padding: 0 16px; }
+    .intro .wrap { padding-top: 40px; padding-bottom: 48px; gap: 24px; }
+    .intro h1 { font-size: 2.25rem; }
+    .lede { font-size: 1.125rem; }
+    .profile-card { flex-direction: column; align-items: flex-start; box-shadow: none; padding: 20px; }
+    .portrait { width: 140px; }
+    .profiles { align-self: stretch; }
+    section h2 { font-size: 1.75rem; }
+    .band .wrap { padding-top: 48px; padding-bottom: 48px; gap: 20px; }
+    .project { padding: 24px 20px; }
+    .project h3 { font-size: 1.5rem; }
+    .pubs .wrap { padding-top: 56px; gap: 20px; }
+    .pub-list li { grid-template-columns: 1fr; padding: 18px 20px; }
+    .venue { padding-top: 0; font-size: 0.75rem; }
+    .pub-title { font-size: 1rem; line-height: 1.4; }
+    .authors { font-size: 0.875rem; }
+    .site-footer { margin-top: 56px; }
+    .site-footer .wrap { padding-top: 40px; padding-bottom: 32px; gap: 18px; }
+    .site-footer h2 { font-size: 1.75rem; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <svg aria-hidden="true" width="26" height="26" viewBox="0 0 26 26"><circle cx="7" cy="13" r="3" fill="#F8CD5F"/><circle cx="19" cy="13" r="3" fill="#D8CCAA"/><circle cx="13" cy="7" r="3" fill="#D8CCAA"/><circle cx="13" cy="19" r="3" fill="#D8CCAA"/></svg>
+      Pei-Chi Pan
+    </a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="btn" href="cv.pdf">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section id="about" class="intro" aria-labelledby="about-h">
+    <div class="wrap">
+      <div class="intro-text">
+        <p class="eyebrow">PhD student · Human–Computer Interaction · University of Houston</p>
+        <h1 id="about-h">Hi, I’m <span class="hl">Pei-Chi</span>.</h1>
+        <p class="lede">I’m a PhD student at the University of Houston, advised by <a href="https://emanidotch.com/">Emani Hicks</a> in the AWARE Lab. I’m interested in human-centered AI for health and social wellbeing, both developing the models and designing how people interact with them through wearables and apps. My research interests include:</p>
+        <ul class="checks">
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="11" fill="#F8CD5F"/><path d="M6.5 11.2l3 3 6-6.4" fill="none" stroke="#1F1F1F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Human-centered AI for health and social wellbeing</li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="11" fill="#F8CD5F"/><path d="M6.5 11.2l3 3 6-6.4" fill="none" stroke="#1F1F1F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Human–AI interaction with LLMs and ML systems</li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="11" fill="#F8CD5F"/><path d="M6.5 11.2l3 3 6-6.4" fill="none" stroke="#1F1F1F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Community-centered design of intelligent technology</li>
+        </ul>
+        <div class="btn-row" style="padding-top: 8px">
+          <a class="btn" href="#projects">See my research</a>
+          <a class="btn outline" href="cv.pdf">Download CV</a>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="portrait">
+          <!-- To add your photo: put photo.jpg next to this file, then add this line here:
+               <img src="photo.jpg" alt="Portrait of Pei-Chi Pan"> -->
+        </div>
+        <nav class="profiles" aria-label="Profiles">
+          <a href="mailto:YOUR_EMAIL@uh.edu"><span class="badge"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>Email</a>
+          <a href="https://scholar.google.com/citations?user=49iNHm8AAAAJ&amp;hl=en"><span class="badge"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></span>Google Scholar</a>
+          <a href="https://www.linkedin.com/in/pei-chi-pan-6252ab201/"><span class="badge"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>LinkedIn</a>
+          <a href="https://openreview.net/profile?id=~Pei-Chi_Pan1"><span class="badge"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15H6z"/><path d="M9 12h6M9 16h6"/></svg></span>OpenReview</a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="band" aria-labelledby="projects-h">
+    <div class="wrap">
+      <h2 id="projects-h">Current project</h2>
+      <article class="project">
+        <p class="meta">Study runs fall 2026 · 2 weeks per participant</p>
+        <h3>EarMark</h3>
+        <p class="desc">For people with misophonia, hyperacusis, or sensory sensitivity, some everyday sounds are overwhelming — but not every time. EarMark pairs short phone check-ins with Apple Watch data to understand what makes those moments different. No audio or location is ever stored.</p>      </article>
+    </div>
+  </section>
+
+  <section id="publications" class="pubs" aria-labelledby="pubs-h">
+    <div class="wrap">
+      <h2 id="pubs-h">Publications</h2>
+      <ul class="pub-list">
+        <li>
+          <span class="venue">TMLR 2026</span>
+          <div>
+            <a class="pub-title" href="https://openreview.net/profile?id=~Pei-Chi_Pan1">Reward Modeling for Reinforcement Learning-Based LLM Reasoning: Design, Challenges, and Evaluation</a>
+            <span class="authors"><strong>Pei-Chi Pan</strong>, Yingbin Liang, Sen Lin</span>
+          </div>
+        </li>
+        <li>
+          <span class="venue">NeurIPS 2026</span>
+          <div>
+            <a class="pub-title" href="https://openreview.net/profile?id=~Pei-Chi_Pan1">Specialists Hold, Generalists Discount: Asymmetric Equilibrium in LLM Routing Auctions</a>
+            <span class="authors">Hou, Lu, Karanjai, <strong>Pan</strong>, Lin, Xu, Shi</span>
+          </div>
+        </li>
+        <li>
+          <span class="venue">Under review</span>
+          <div>
+            <span class="pub-title">Anchors, Mixed Equilibria, and Welfare in LLM Routing Auctions</span>
+            <span class="authors">Hou, Lu, Karanjai, <strong>Pan</strong>, Lin, Xu, Shi</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact" class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <h2>Let’s <span class="hl">talk</span></h2>
+      <a class="btn" href="mailto:YOUR_EMAIL@uh.edu">YOUR_EMAIL@uh.edu</a>
+    </div>
+    <p class="footer-links">
+      <a href="https://scholar.google.com/citations?user=49iNHm8AAAAJ&amp;hl=en">Google Scholar</a>
+      <a href="https://openreview.net/profile?id=~Pei-Chi_Pan1">OpenReview</a>
+      <a href="https://www.linkedin.com/in/pei-chi-pan-6252ab201/">LinkedIn</a>
+    </p>
+    <p class="fine">No autoplay, no motion. This site follows your device’s reduced-motion and text-size settings.</p>
+  </div>
+</footer>
+</body>
+</html>
