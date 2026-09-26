@@ -81,6 +81,8 @@
   .profiles { align-self: stretch; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px; }
   .profiles a { display: flex; align-items: center; gap: 10px; min-height: 44px; font-family: var(--sans); font-size: 0.875rem; font-weight: 700; text-decoration: none; }
   .profiles a:hover { text-decoration: underline; }
+  .profiles a { min-width: 0; overflow-wrap: anywhere; }
+  .profiles a.email { grid-column: 1 / -1; }
   .badge { width: 32px; height: 32px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 
   /* Sections */
@@ -195,7 +197,7 @@
                <img src="photo.jpg" alt="Portrait of Pei-Chi Pan"> -->
         </div>
         <nav class="profiles" aria-label="Profiles">
-          <a href="mailto:ppan@CougarNet.UH.EDU"><span class="badge"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>ppan@CougarNet.UH.EDU</a>
+          <a class="email" href="mailto:ppan@cougarnet.uh.edu"><span class="badge"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>ppan@cougarnet.uh.edu</a>
           <a href="https://scholar.google.com/citations?user=49iNHm8AAAAJ&amp;hl=en"><span class="badge"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></span>Google Scholar</a>
           <a href="https://www.linkedin.com/in/pei-chi-pan-6252ab201/"><span class="badge"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>LinkedIn</a>
           <a href="https://openreview.net/profile?id=~Pei-Chi_Pan1"><span class="badge"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15H6z"/><path d="M9 12h6M9 16h6"/></svg></span>OpenReview</a>
@@ -249,7 +251,7 @@
   <div class="wrap">
     <div class="footer-top">
       <h2>Let’s <span class="hl">talk</span></h2>
-      <a class="btn" href="mailto:ppan@CougarNet.UH.EDU">ppan@CougarNet.UH.EDU</a>
+      <a class="btn" href="mailto:ppan@cougarnet.uh.edu">ppan@cougarnet.uh.edu</a>
     </div>
     <p class="footer-links">
       <a href="https://scholar.google.com/citations?user=49iNHm8AAAAJ&amp;hl=en">Google Scholar</a>
