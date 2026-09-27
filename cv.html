@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV · Pei-Chi Pan · University of Houston</title>
+<meta name="description" content="Curriculum vitae of Pei-Chi Pan, PhD student in Computer Science at the University of Houston.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Ccircle cx='7' cy='13' r='3.4' fill='%23F8CD5F'/%3E%3Ccircle cx='19' cy='13' r='3.4' fill='%23D8CCAA'/%3E%3Ccircle cx='13' cy='7' r='3.4' fill='%23D8CCAA'/%3E%3Ccircle cx='13' cy='19' r='3.4' fill='%23D8CCAA'/%3E%3C/svg%3E">
+<style>
+  @page { size: letter; margin: 0.65in 0.7in; }
+  :root {
+    --ink: #1a1a1a;
+    --body: #2e2e2e;
+    --muted: #5a5a5a;
+    --rule: #b8a46a;
+    --serif: 'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+    --sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: #e9e6df; color: var(--ink); font-family: var(--serif); font-size: 10.5pt; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: inherit; text-decoration: none; }
+  p, ul, ol, h1, h2, h3, h4 { margin: 0; }
+
+  .toolbar { position: sticky; top: 0; z-index: 5; background: #fff; border-bottom: 1px solid #ECE7DC; font-family: var(--sans); font-size: 14px; padding: 10px max(20px, calc((100% - 8.5in) / 2)); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .toolbar .back { font-weight: 700; color: var(--ink); }
+  .toolbar .back:hover { text-decoration: underline; }
+  .toolbar button { font: 700 14px var(--sans); background: #F8CD5F; color: #1f1f1f; border: 0; min-height: 44px; padding: 0 20px; cursor: pointer; }
+  .toolbar button:hover { filter: brightness(0.96); }
+  .toolbar a:focus-visible, .toolbar button:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+
+  .page { width: 8.5in; min-height: 11in; margin: 28px auto; background: #fff; padding: 0.65in 0.7in; box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
+
+  header { border-bottom: 1.5pt solid var(--ink); padding-bottom: 9pt; margin-bottom: 4pt; }
+  h1 { font-family: var(--serif); font-size: 22pt; font-weight: 600; letter-spacing: 0.01em; line-height: 1.1; }
+  .contact { margin-top: 6pt; font-family: var(--sans); font-size: 8.8pt; color: var(--muted); display: flex; flex-wrap: wrap; gap: 2pt 0; }
+  .contact > * + *::before { content: "·"; margin: 0 7pt; color: var(--rule); }
+  .contact a { color: var(--ink); border-bottom: 0.5pt solid var(--rule); }
+
+  section { margin-top: 13pt; }
+  h2 { font-family: var(--sans); font-size: 9pt; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); border-bottom: 0.75pt solid var(--rule); padding-bottom: 2.5pt; margin-bottom: 7pt; break-after: avoid; }
+  .entry { margin-bottom: 8pt; }
+  .entry > .row, .proj h4 { break-after: avoid; }
+  ul.b li { break-inside: avoid; }
+  .entry:last-child { margin-bottom: 0; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 16pt; }
+  .row h3 { font-size: 10.5pt; font-weight: 700; }
+  .when { font-family: var(--sans); font-size: 8.8pt; color: var(--muted); white-space: nowrap; }
+  .where { font-style: italic; color: var(--body); }
+  .note { color: var(--body); margin-top: 1.5pt; }
+  ul.b { padding-left: 13pt; margin-top: 2.5pt; color: var(--body); }
+  ul.b li { margin-bottom: 1.5pt; }
+  ul.b li::marker { color: var(--muted); }
+  .proj { margin-top: 5pt; break-inside: avoid; }
+  .proj h4 { font-size: 10.2pt; font-weight: 600; font-style: italic; }
+
+  .pubhead { font-family: var(--sans); font-size: 8.5pt; font-weight: 700; color: var(--muted); margin: 6pt 0 3pt; }
+  .pubhead:first-of-type { margin-top: 0; }
+  ol.pubs { list-style: none; padding: 0; }
+  ol.pubs li { display: grid; grid-template-columns: 26pt 1fr; margin-bottom: 4.5pt; break-inside: avoid; color: var(--body); }
+  .tag { font-family: var(--sans); font-size: 8.8pt; font-weight: 700; color: var(--muted); padding-top: 0.5pt; }
+  .me { font-weight: 700; color: var(--ink); text-decoration: underline; text-decoration-thickness: 0.6pt; text-underline-offset: 1.5pt; }
+  .venue { font-style: italic; }
+
+  @media print {
+    body { background: #fff; }
+    .toolbar { display: none; }
+    .page { width: auto; min-height: 0; margin: 0; padding: 0; box-shadow: none; }
+  }
+  @media screen and (max-width: 900px) {
+    .page { width: auto; margin: 12px; padding: 28px 22px; min-height: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <a class="back" href="index.html">← Pei-Chi Pan</a>
+  <button type="button" onclick="window.print()">Download PDF</button>
+</div>
+
+<div class="page">
+  <header>
+    <h1>Pei-Chi Pan</h1>
+    <p class="contact">
+      <span>Houston, TX</span>
+      <a href="mailto:ppan@cougarnet.uh.edu">ppan@cougarnet.uh.edu</a>
+      <a href="https://scholar.google.com/citations?user=49iNHm8AAAAJ&amp;hl=en">Google Scholar</a>
+      <a href="https://pampeichi.github.io/">Website</a>
+      <a href="https://www.linkedin.com/in/pei-chi-pan-6252ab201/">LinkedIn</a>
+    </p>
+  </header>
+
+  <section>
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="row"><h3>University of Houston</h3><span class="when">Jan 2025 – present</span></div>
+      <div class="row"><span class="where">Ph.D. in Computer Science</span><span class="when">Houston, TX</span></div>
+      <p class="note">Research interest: human-centered AI, personal health informatics, human–computer interaction.</p>
+    </div>
+    <div class="entry">
+      <div class="row"><h3>Rice University</h3><span class="when">Dec 2024</span></div>
+      <div class="row"><span class="where">Master of Computer Science</span><span class="when">Houston, TX</span></div>
+    </div>
+    <div class="entry">
+      <div class="row"><h3>National Yang Ming Chiao Tung University</h3><span class="when">Jun 2023</span></div>
+      <div class="row"><span class="where">B.S. in Information Management and Finance</span><span class="when">Hsinchu, Taiwan</span></div>
+      <p class="note">Cross-Disciplinary Program in Financial Technology; Minor in English Literature and Linguistics.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <p class="pubhead">Journal and Conference Papers</p>
+    <ol class="pubs">
+      <li><span class="tag">[J1]</span><p><span class="me">Pei-Chi Pan</span>, Yingbin Liang, and Sen Lin. “Reward Modeling for Reinforcement Learning-Based LLM Reasoning: Design, Challenges, and Evaluation.” <span class="venue">Transactions on Machine Learning Research (TMLR)</span>, 2026.</p></li>
+      <li><span class="tag">[C1]</span><p>Hou, Lu, Karanjai, <span class="me">Pan</span>, Lin, Xu, and Shi. “Specialists Hold, Generalists Discount: Asymmetric Equilibrium in LLM Routing Auctions.” <span class="venue">Advances in Neural Information Processing Systems (NeurIPS)</span>, 2026.</p></li>
+    </ol>
+    <p class="pubhead">Under Review</p>
+    <ol class="pubs">
+      <li><span class="tag">[U1]</span><p>Hou, Lu, Karanjai, <span class="me">Pan</span>, Lin, Xu, and Shi. “Anchors, Mixed Equilibria, and Welfare in LLM Routing Auctions.” Under review, 2026.</p></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Research Experience</h2>
+    <div class="entry">
+      <div class="row"><h3>Graduate Research Assistant</h3><span class="when">Jan 2025 – present</span></div>
+      <div class="row"><span class="where">Department of Computer Science, University of Houston</span><span class="when">Houston, TX</span></div>
+
+      <div class="proj">
+        <h4>EarMark: Everyday Noise-Sensitivity Sensing with Wearables</h4>
+        <ul class="b">
+          <li>Designing an ecological data-collection protocol that pairs ecological momentary assessment (EMA) with passive Apple Watch sensing to characterize everyday contexts associated with noise-sensitivity reactions.</li>
+          <li>Developing the protocol for a participant field deployment (fall 2026) with a privacy-preserving design: no audio or location data is stored.</li>
+          <li>Building a multimodal dataset to support personalized models that anticipate difficult moments, extending prior work on assistive technology for noise sensitivity.</li>
+        </ul>
+      </div>
+
+      <div class="proj">
+        <h4>Reward Modeling for RL-Based LLM Reasoning [J1]</h4>
+        <ul class="b">
+          <li>Conducted a comprehensive survey of reinforcement learning for LLM reasoning, examining the limitations of chain-of-thought prompting and the shift from RLHF toward verifiable, multi-step reasoning.</li>
+          <li>Proposed a taxonomy of reward design to structure the research landscape.</li>
+          <li>Analyzed core challenges in RL-for-reasoning pipelines, including reward hacking, diversity collapse, and reasoning hallucinations, and synthesized mitigation strategies.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Teaching</h2>
+    <div class="entry">
+      <div class="row"><h3>Teaching Assistant, Machine Learning</h3><span class="when">Jan 2025 – Dec 2025</span></div>
+      <div class="row"><span class="where">Department of Computer Science, University of Houston</span><span class="when">Houston, TX</span></div>
+      <ul class="b">
+        <li>Led instructional sessions for undergraduates on advanced machine learning topics, including CNNs and LLMs, covering design principles, implementation challenges, and connections to current research.</li>
+        <li>Designed and led PyTorch lab sessions; supervised programming projects in which students built and evaluated novel models.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Industry Experience</h2>
+    <div class="entry">
+      <div class="row"><h3>Microsoft, Azure Cloud &amp; AI</h3><span class="when">Jul 2022 – Aug 2023</span></div>
+      <div class="row"><span class="where">Technical Consultant Intern</span><span class="when">Taipei, Taiwan</span></div>
+      <ul class="b">
+        <li>Member of a 40-person consulting team that delivered KGI Bank’s mobile and internet banking application, Taiwan’s first microservices-based internet banking system (launched October 2022).</li>
+        <li>Coordinated with developers, product managers, system analysts, and clients on features, testing, and deployment; authored QA test plans and documentation in Azure DevOps; built Angular/TypeScript front-end features.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="row"><h3>DBS Bank, Technology &amp; Operations</h3><span class="when">Jul 2021 – Aug 2021</span></div>
+      <div class="row"><span class="where">Data Analyst Intern</span><span class="when">Taipei, Taiwan</span></div>
+      <ul class="b">
+        <li>Automated customer-transaction retrieval and a daily reporting workflow in Python (pandas) and Microsoft Access, replacing manual processes for the consumer finance team.</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>
